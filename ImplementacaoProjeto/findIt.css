@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400!important;500&family=Saira:wdth,wght@50,572&display=swap');
+
+
+.logotipo {
+    width: 35vw !important;
+    aspect-ratio: 2 !important;
+
+}
+
+.pd {
+    background-color: #BBBFCA !important;
+    min-height: 20vh !important;
+
+    border-bottom-right-radius: 30px !important;
+}
+
+/* #pb {
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: space-evenly!important;
+    align-items: center!important;
+    height: 60vh!important;
+  }
+
+  #pb div {
+    background-color: #bccef855!important;
+    width: 90vw!important;
+    aspect-ratio: 1.5!important;
+    border-radius: 30px!important;
+    margin: 5px
+  } */
+
+body {
+    background-color: #E8E8E8 !important;
+    font-family: 'Saira' !important;
+
+
+}
+
+.bt {
+    background-color: #BBBFCA !important;
+}
+
+.nv {
+    background-color: #BBBFCA !important;
+}
+
+.btncaminho {
+    background-color: #495464 !important;
+    color: white !important;
+    border: 1px transparent !important;
+    border-radius: 5px !important;
+}
+
+.imgbtn {
+    background-color: #BBBFCA !important;
+    background-image: url('magnifying-glass-solid.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 75% 75% !important;
+    border: none !important;
+    padding: 10px !important;
+}
+
+.navbar {
+    font-weight: 900 !important;
+    font-size: 20pt !important;
+    color: black !important;
+
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.navbar-brand {
+    height: 73px !important;
+    padding: 0;
+    float: left !important;
+
+}
+
+.prodImg {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+::placeholder {
+    color: white !important;
+    opacity: 0.8 !important;
+}
+
+input[type="text"] {
+    font-family: 'Saira' !important;
+    font-weight: 500 !important;
+    font-size: 15pt !important;
+    color: white !important;
+    background-color: #495464 !important;
+}
+
+button,
+input[type="button"] {
+    background-color: #495464 !important;
+    border: white solid 1px !important;
+    border-radius: 70px !important;
+}
+
+.ui-autocomplete {
+    font-family: 'Saira' !important;
+    font-weight: 300 !important;
+    font-size: 15pt !important;
+    color: white;
+    background-color: #495464 !important;
+}

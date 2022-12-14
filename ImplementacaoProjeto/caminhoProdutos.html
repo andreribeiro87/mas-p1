@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!-- queijo is a problem  -->
+<html lang="en">
+
+<head>
+
+	<title>FindIt</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="findIt.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<!-- Bootstrap CSS v5.2.1 -->
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="fa.min.css" rel="stylesheet" /> -->
+	<link href="lineicons.css" rel="stylesheet">
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500&display=swap"
+		rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500&family=Saira:wdth,wght@50,572&display=swap"
+		rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+	<style>
+		#canvas {
+			background-color: #495464 !important;
+			border: 0 !important;
+			height: 450px !important;
+			min-height: 0;
+		}
+
+		.window-container {
+			background-color: #E8E8E8;
+		}
+
+		.bt {
+			border-radius: 5px !important;
+			font-size: 20px !important;
+		}
+
+		button {
+			border: 0 !important;
+			background-color: transparent !important;
+		}
+
+		.txtbtn {
+			font-size: 20px !important;
+			color: white !important;
+			font-family: 'Saira' !important;
+			font-weight: 500 !important;
+			border: transparent !important;
+			border-radius: 50px !important;
+
+		}
+	</style>
+
+
+
+	<title>FindIt</title>
+
+
+
+	<!-- <link rel="icon" type="image/png" href="https://pythonsandbox.com/images/logo_python_no-text.png"> -->
+
+
+
+	<!-- Bootstrap & Other CSS -->
+	<link rel="stylesheet" href="jquery-ui.css">
+	<!-- <link media="all" type="text/css" rel="stylesheet" href="https://www.pythonsandbox.com/css/bootstrap.superhero.min.css"> -->
+	<link media="all" type="text/css" rel="stylesheet" href="bootstrap.superhero.min.css">
+
+
+
+
+	<!-- <link media="all" type="text/css" rel="stylesheet" href="https://www.pythonsandbox.com/css/codemirror.css"> -->
+	<link media="all" type="text/css" rel="stylesheet" href="codemirror.css">
+
+	<!-- <link rel="stylesheet" href="./css/codemirror.css"> -->
+	<!-- <link media="all" type="text/css" rel="stylesheet" href="https://www.pythonsandbox.com/css/base16-dark.css"> -->
+
+	<link rel="stylesheet" href="base16-dark.css">
+	<!-- <link media="all" type="text/css" rel="stylesheet" href="https://www.pythonsandbox.com/css/sandbox.css"> -->
+
+	<link rel="stylesheet" href="sandbox.css">
+
+
+
+	<!-- Javascript -->
+
+	<script src="jquery1.9.min.js" type="text/javascript"></script>
+
+
+
+
+	<!-- <script src="https://www.pythonsandbox.com/js/codemirror-custom.js"></script> -->
+	<!-- <script src="https://www.pythonsandbox.com/js/skulpt.min.js"></script> -->
+	<!-- <script src="https://www.pythonsandbox.com/js/sandbox.js"></script> -->
+	<!-- <script src="https://www.pythonsandbox.com/js/codemirror-custom.js"></script> -->
+	<!-- <script src="https://www.pythonsandbox.com/js/skulpt-stdlib.js"></script> -->
+
+	<script src="codemirror-custom.js"></script>
+
+	<script src="skulpt.min.js"></script>
+
+	<script src="sandbox.js"></script>
+	<script src="codemirror-custom.js"></script>
+
+	<script src="skulpt-stdlib.js"></script>
+
+	<link rel="stylesheet" href="jquery-ui.css">
+
+
+
+
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+	<!--[if lt IE 9]>
+		
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+		<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm navbar-light nv mb-2">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img class="logotipo"
+					src="/1º SEMESTRE/MAS/PROJETO/primeiroRelatório/logoFindIt.png"></a>
+			<button class="navbar-toggler d-lg-none btn btn-primary" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavId">
+				<ul class="navbar navbar-expand-sm navbar-light nv mb-2">
+					<!-- <li class="nav-item "> -->
+					<a class="nav-link active" href="#" aria-current="page">
+						<i class="fa fa-o fa-shopping-cart"></i> Produtos<span class="visually-hidden">(current)</span>
+					</a>
+					<a class="nav-link active" href="#"> Lista de compras</a>
+					<a class="nav-link active" href="caminhoProdutos.html"> Caminho</a>
+					<!-- </li> -->
+					<!-- <li class="nav-item">
+			  </li>
+			  <li class="nav-item">
+			  </li> -->
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10538200-12"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-10538200-12');
+	</script>
+	<div class="page-content">
+
+
+		<div class="page-header">
+
+			<form method="POST" action="https://www.pythonsandbox.com/code" accept-charset="UTF-8"><input name="_token"
+					type="hidden" value="ZWgoZaTTviITuwY57S5MPcCR0LroyUi5TAb8ISxs">
+				<input name="mode" type="hidden" value="turtle">
+				<input name="save-as-next" type="hidden" value="0">
+				<input name="save-as-last" type="hidden" value="0">
+				<input name="save-as-new" type="hidden" value="0">
+				<div class="container">
+
+
+
+
+
+					<div class="row">
+
+						<div class="">
+
+							<div class="row">
+
+								<div class="d-none ">
+
+									<p class="lead"></p>
+
+									<textarea id="sandbox" class="nana">
+
+
+import turtle
+
+
+
+
+def draw_map():
+
+	data = 'UP;-150 25;CIRCLE_START;-100 200;FILL_START;-100 200;-100 50;-150 50;-150 200;FILL_END;-50 200;FILL_START;0 200;0 50;-50 50;-50 200;FILL_END;50 200;FILL_START;100 200;100 50;50 50;50 200;FILL_END;-150 0;FILL_START;-100 0;-100 -150;-150 -150;-150 0;FILL_END;-50 0;FILL_START;0 0;0 -150;-50 -150;-50 0;FILL_END;50 0;FILL_START;100 0;100 -150;50 -150;50 0;FILL_END;100 25;CIRCLE_START'
+
+	t.speed(200)
+
+	for a in data.split(';'):
+		
+		t.pencolor('black')
+
+		if a == 'UP':
+			t.up()
+		elif a == 'CIRCLE_START':
+			t.pencolor('red')
+			t.dot(20)
+		# elif a == 'CIRCLE_WAYPOINT':
+		#     t.pencolor('white')
+		#     t.dot(20)
+		elif a == 'FILL_START':
+			t.begin_fill()
+		elif a == 'FILL_END':
+			t.end_fill()
+			# elif a[0]=='SECTION':
+			#     t.pencolor('black')
+			#     # t.write("seccao",align='center',font=('Arial', 16, 'normal'))
+		else:
+
+			i = a.split(' ')
+			t.goto(int(i[0]), int(i[1]))
+
+
+def draw_products(lista_locais):
+	t.speed(20)
+	for item in compras:
+		for code in produtos:
+			if item == code:
+				local_x = produtos[code][4]
+				local_y = produtos[code][5]
+				t.goto(local_x, local_y)
+				t.pencolor('blue')
+				t.dot(15)
+				lista_locais.append((local_x, local_y))
+	return lista_locais
+
+
+def draw_line(lista_locais):
+	# a lista -125 tem elementos ? se sim qual deles está mais proximo, e agora qual existem mais algum elemento na lista se sim, qual está mais proximo, se nao vai para o way point, repete
+	t.speed(20)
+		
+	waypoint = {}
+	waypoint[-150] = {local[1] for local in lista_locais if local[0] == -150}
+	waypoint[-100] = {local[1] for local in lista_locais if local[0] == -100}
+	waypoint[-50] = {local[1] for local in lista_locais if local[0] == -50}
+	waypoint[0] = {local[1] for local in lista_locais if local[0] == 0}
+	waypoint[50] = {local[1] for local in lista_locais if local[0] == 50}
+	waypoint[100] = {local[1] for local in lista_locais if local[0] == 100}
+	waypoint[150] = {local[1] for local in lista_locais if local[0] == 150}
+
+	waypoint_sorted = dict(sorted(waypoint.items()))
+	
+	t.pensize(5)
+	t.goto(-150, 25)
+	t.down()
+	t.goto(-150, 25)
+
+	for local in waypoint_sorted:
+		if len(waypoint_sorted[local]) != 0:
+			t.goto(local, 25)
+
+			distancia_max = max(waypoint_sorted[local])
+			distancia_min = min(waypoint_sorted[local])
+
+			if distancia_max > 0:
+				t.goto(local, distancia_max)
+				t.goto(local, 25)
+			if distancia_min < 0:
+				t.goto(local, distancia_min)
+				t.goto(local, 25)
+
+
+
+produtos = {   'p1': ('Ketchup', 'Mercearia Salgado', 1.59, 0.23, -150, 56),                                                
+	'p10': ('Leite 6x1L', 'Lacticinios', 4.92, 0.06, -50, 58),                                                   
+	'p11': ('Natas', 'Lacticinios', 0.79, 0.06, -50, 87),
+	'p12': ('Ovos', 'Lacticinios', 0.94, 0.06, -50, 110),
+	'p13': ('Espadarte Posta', 'Peixaria', 6.49, 0.06, -50, -140),
+	'p14': ('Queijo', 'Charcutaria', 3.89, 0.06, 0, -80),
+	'p15': ('Laranjas', 'Frutas e Legumes', 1.449, 0.06, 50, -40),
+	'p16': ('Ameixa Seca', 'Frutas e Legumes', 2.0, 0.06, 50, -70),
+	'p17': ('Tabuleiro', 'Casa', 7.0, 0.23, 100, -60),
+	'p18': ('Batatas', 'Frutas e Legumes', 17.0, 0.06, 50, -130),
+	'p19': ('Limpa Vidros', 'Limpeza', 3.69, 0.23, 100, 140),
+	'p2 ': ('Atum', 'Mercearia Salgado', 3.38, 0.06, -150, 80),
+	"p20": ('Oregaos', 'Mercearia Salgado', 1.42, 0.06, -150, 120),
+	'p21': ('Bolachas Maria', 'Mercearia Doce', 2.39, 0.23, -100, 140),
+	'p22': ('Pedras Salgadas', 'Bebidas', 2.46, 0.13, -150, -80),
+	'p23': ('Detergente Roupa', 'Limpeza', 12.99, 0.23, 100, 120),
+	'p24': ('Iogurte Grego', 'Lacticinios', 2.59, 0.06, -50, 130),
+	'p3': ('Cogumelos', 'Mercearia Salgado', 1.98, 0.23, -150, 95),
+	'p4': ('Bolachas Cacau', 'Mercearia Doce', 1.39, 0.23, -100, 60),
+	'p5': ('Cerelac', 'Mercearia Doce', 5.65, 0.06, -100, 100),
+	'p6': ('Heineken 12x25CL', 'Bebidas', 8.99, 0.23, -150, -130),
+	'p7': ('Gel Banho', 'Higiene', 5.99, 0.23, 100, 130),
+	'p8': ('Lencos de Bolso', 'Limpeza', 1.59, 0.23, 100, 60),
+	'p9': ('Jardineira', 'Congelados', 1.99, 0.06, -50, -70)}
+
+
+
+
+					
+
+
+
+compras = {'p20':1, 'p10':1, 'p15':1, 'p8':1,'p13':1}
+
+
+t = turtle.Turtle()
+lista_locais = []
+turtle.Screen().bgcolor('#BBBFCA')
+# turtle.screensize(canvwidth=360, canvheight=740)
+# t.speed(100)
+draw_map()
+draw_products(lista_locais)
+draw_line(lista_locais)
+
+	
+
+turtle.Screen().exitonclick()
+									
+									
+																		
+									</textarea>
+
+
+								</div>
+
+
+
+							</div>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 window-container">
+
+							<div class="col-12">
+								<div id="canvas"></div>
+								<pre class="hidden no-show" id="output"></pre>
+								<button type="button" class="btncaminho p-3 runner mt-2">Caminho</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- <div>
+			<div class="mb-3">
+				<label for="" class="form-label">Seleciona os produtos</label>
+				<select class="form-select form-select-lg" name="" id="lista">
+					<option selected>Select one! Do not select this...</option>
+					<option value="p1">Ketchup</option>
+					<option value="p2">Atum</option>
+					<option value="p3">Cogumelos</option>
+					<option value="p4">Bolachas Cacau</option>
+					<option value="p5">Cerelac</option>
+					<option value="p6">Heineken</option>
+					<option value="p7">Gel de Banho</option>
+					<option value="p8">Lenços de Bolso</option>
+					<option value="p9">Jardineira</option>
+					<option value="p10">Leite</option>
+					<option value="p11">Natas</option>
+					<option value="p12">Ovos</option>
+					<option value="p13">Espadarte Posta</option>
+					<option value="p14">Queijo</option>
+					<option value="p15">Laranjas</option>
+					<option value="p16">Ameixa Seca</option>
+					<option value="p17">Tabuleiro</option>
+					<option value="p18">Batatas</option>
+					<option value="p19">Limpa Vidros</option>
+					<option value="p20">Oregãos</option>
+					<option value="p21">Bolachas Maria</option>
+					<option value="p22">Pedras Salgadas</option>
+					<option value="p23">Detergente Roupa</option>
+					<option value="p24">Iogurte Grego</option>
+
+				</select>
+
+			</div>
+
+		</div> -->
+		<div class="row">
+			<div class="ui-widget">
+				<input type="text" id="tags" class="col-9 border rounded-5 p-2 ms-3" placeholder="    Adicione ">
+
+				<button class="btn btn-primary bt txtbtn col-2 py-2 pt-3" id="btn-add1">Add</button>
+				<!-- <button class="btn btn-primary" id="btn-ht">change html</button> -->
+
+			</div>
+		</div>
+
+
+
+		<!-- Bootstrap JavaScript -->
+
+		<script src="bootstrap.min.js"></script>
+
+
+
+
+		<script src="jquery-3.6.0.js"></script>
+		<script src="jquery-ui.js"></script>
+
+		<script src="sandbox-saving.js"></script>
+		<!-- <script src="https://www.pythonsandbox.com/js/sandbox-saving.js"></script> -->
+		<script src="camProd.js"></script>
+
+		<!-- <script>
+			function clicker(this) {
+				
+				this.click();	
+			}
+
+		</script> -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

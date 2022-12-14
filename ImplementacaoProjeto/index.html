@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>FindIt</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="findIt.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="fa.min.css" rel="stylesheet" /> -->
+  <link href="lineicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500&family=Saira:wdth,wght@50,572&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    button {
+      border: 0 !important;
+      background-color: transparent !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Barra inicial -->
+  <div>
+    <nav class="navbar navbar-expand-sm navbar-light nv mb-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logotipo"
+            src="/1º SEMESTRE/MAS/PROJETO/primeiroRelatório/logoFindIt.png"></a>
+        <button class="navbar-toggler d-lg-none btn btn-primary" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar navbar-expand-sm navbar-light nv mb-2">
+            <!-- <li class="nav-item "> -->
+            <a class="nav-link active" href="#" aria-current="page">
+              <i class="fa fa-o fa-shopping-cart"></i> Produtos<span class="visually-hidden">(current)</span>
+            </a>
+            <a class="nav-link active" href="#"> Lista de compras</a>
+            <a class="nav-link active" href="caminhoProdutos.html"> Caminho</a>
+            <!-- </li> -->
+            <!-- <li class="nav-item">
+            </li>
+            <li class="nav-item">
+            </li> -->
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+  </div>
+  <!-- Div de conteudo -->
+  <div class="container">
+    <div class="row">
+      <form class="d-flex my-2 my-lg-0 ui-widget">
+        <input class="col-10 me-1 border rounded-5 " type="text" autocomplete="on" id="tags" placeholder="     Search">
+        <input type="button" class=" col-2  my-0 imgbtn" id="btn-srch" alt="Search">
+      </form>
+    </div>
+    <div class="row d-none mt-1 mb-3 pd" id="nameprod">
+      <div class="col-9 mt-2" id="prodPriceZone"></div>
+      <div class="col-3 mt-1"><button class="btn btn-primary" id="add">Adiciona</button></div>
+      <div class="col-12 mt-2" id="prodImgZone"></div>
+
+      <div class="col-12" id="local">local</div>
+    </div>
+
+  </div>
+
+
+  <!--carousel das promos-->
+  <div id="carouselId" class="carousel slide mt-3" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide">
+      </li>
+      <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+      <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="pub1auchan.jpg" class="w-100 d-block" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img src="pub2auchan.jpg" class="w-100 d-block" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img src="pub3auchan.jpg" class="w-100 d-block" alt="Third slide">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+
+
+  <script src="bootstrap.min.js"></script>
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jquery-ui.js"></script>
+
+
+  <script>
+
+    $(document).ready(function () {
+      $("#add").click(function () {
+
+        alert("The paragraph was clicked.");
+      });
+      var availableTags = {
+        "Ketchup": 'p1',
+        "Atum": 'p2',
+        "Cogumelos": 'p3',
+        "Bolachas Cacau": 'p4',
+        "Cerelac": 'p5',
+        "Heineken": 'p6',
+        "Gel de Banho": 'p7',
+        "Lenços de Bolso": 'p8',
+        "Jardineira": 'p9',
+        "Leite": 'p10',
+        "Natas": 'p11',
+        "Ovos": 'p12',
+        "Espadarte Posta": 'p13',
+        "Queijo": 'p14',
+        "Laranjas": 'p15',
+        "Ameixa Seca": 'p16',
+        "Tabuleiro": 'p17',
+        "Batatas": 'p18',
+        "Limpa Vidros": 'p19',
+        "Oregãos": 'p20',
+        "Bolachas Maria": 'p21',
+        "Pedras Salgadas": 'p22',
+        "Detergente Roupa": 'p23',
+        "Iogurte Grego": 'p24'
+      };
+      var availableTagsAC = [
+        "Ketchup",
+        "Atum",
+        "Cogumelos",
+        "Bolachas Cacau",
+        "Cerelac",
+        "Heineken",
+        "Gel de Banho",
+        "Lenços de Bolso",
+        "Jardineira",
+        "Leite",
+        "Natas",
+        "Ovos",
+        "Espadarte Posta",
+        "Queijo",
+        "Laranjas",
+        "Ameixa Seca",
+        "Tabuleiro",
+        "Batatas",
+        "Limpa Vidros",
+        "Oregãos",
+        "Bolachas Maria",
+        "Pedras Salgadas",
+        "Detergente Roupa",
+        "Iogurte Grego"
+      ];
+      $("#tags").autocomplete({
+        source: availableTagsAC
+      });
+      const comprar = {}
+      $('#btn-srch').click(function () {
+        var produto = $("#tags").val();
+        quantidade = 1;
+        var p = availableTags[produto];
+        comprar[p] = quantidade;
+        console.log(comprar)
+        var comp1 = JSON.stringify(comprar)
+        console.log(comp1)
+        console.log(JSON.stringify(produto), '###########')
+        // $('.nana').html("\nimport turtle\n\n\n\n\ndef draw_map():\n\n    data = 'UP;-150 25;CIRCLE_START;-100 200;FILL_START;-100 200;-100 50;-150 50;-150 200;FILL_END;-50 200;FILL_START;0 200;0 50;-50 50;-50 200;FILL_END;50 200;FILL_START;100 200;100 50;50 50;50 200;FILL_END;-150 0;FILL_START;-100 0;-100 -150;-150 -150;-150 0;FILL_END;-50 0;FILL_START;0 0;0 -150;-50 -150;-50 0;FILL_END;50 0;FILL_START;100 0;100 -150;50 -150;50 0;FILL_END;100 25;CIRCLE_START'\n\n    t.speed(200)\n\n    for a in data.split(';'):\n        \n        t.pencolor('black')\n\n        if a == 'UP':\n            t.up()\n        elif a == 'CIRCLE_START':\n            t.pencolor('red')\n            t.dot(20)\n        # elif a == 'CIRCLE_WAYPOINT':\n        #     t.pencolor('white')\n        #     t.dot(20)\n        elif a == 'FILL_START':\n            t.begin_fill()\n        elif a == 'FILL_END':\n            t.end_fill()\n            # elif a[0]=='SECTION':\n            #     t.pencolor('black')\n            #     # t.write(\"seccao\",align='center',font=('Arial', 16, 'normal'))\n        else:\n\n            i = a.split(' ')\n            t.goto(int(i[0]), int(i[1]))\n\n\ndef draw_products(lista_locais):\n    t.speed(20)\n    for item in compras:\n        for code in produtos:\n            if item == code:\n                local_x = produtos[code][4]\n                local_y = produtos[code][5]\n                t.goto(local_x, local_y)\n                t.pencolor('blue')\n                t.dot(15)\n                lista_locais.append((local_x, local_y))\n    return lista_locais\n\n\ndef draw_line(lista_locais):\n    # a lista -125 tem elementos ? se sim qual deles está mais proximo, e agora qual existem mais algum elemento na lista se sim, qual está mais proximo, se nao vai para o way point, repete\n    t.speed(20)\n     \n    waypoint = {}\n    waypoint[-150] = {local[1] for local in lista_locais if local[0] == -150}\n    waypoint[-100] = {local[1] for local in lista_locais if local[0] == -100}\n    waypoint[-50] = {local[1] for local in lista_locais if local[0] == -50}\n    waypoint[0] = {local[1] for local in lista_locais if local[0] == 0}\n    waypoint[50] = {local[1] for local in lista_locais if local[0] == 50}\n    waypoint[100] = {local[1] for local in lista_locais if local[0] == 100}\n    waypoint[150] = {local[1] for local in lista_locais if local[0] == 150}\n\n    waypoint_sorted = dict(sorted(waypoint.items()))\n    \n    t.pensize(5)\n    t.goto(-150, 25)\n    t.down()\n    t.goto(-150, 25)\n\n    for local in waypoint_sorted:\n        if len(waypoint_sorted[local]) != 0:\n            t.goto(local, 25)\n\n            distancia_max = max(waypoint_sorted[local])\n            distancia_min = min(waypoint_sorted[local])\n\n            if distancia_max > 0:\n                t.goto(local, distancia_max)\n                t.goto(local, 25)\n            if distancia_min < 0:\n                t.goto(local, distancia_min)\n                t.goto(local, 25)\n\n\n\nprodutos = {   'p1': ('Ketchup', 'Mercearia Salgado', 1.59, 0.23, -150, 56),                                                \n    'p10': ('Leite 6x1L', 'Lacticinios', 4.92, 0.06, -50, 58),                                                   \n    'p11': ('Natas', 'Lacticinios', 0.79, 0.06, -50, 87),\n    'p12': ('Ovos', 'Lacticinios', 0.94, 0.06, -50, 110),\n    'p13': ('Espadarte Posta', 'Peixaria', 6.49, 0.06, -50, -140),\n    'p14': ('Queijo', 'Charcutaria', 3.89, 0.06, 0, -80),\n    'p15': ('Laranjas', 'Frutas e Legumes', 1.449, 0.06, 50, -40),\n    'p16': ('Ameixa Seca', 'Frutas e Legumes', 2.0, 0.06, 50, -70),\n    'p17': ('Tabuleiro', 'Casa', 7.0, 0.23, 100, -60),\n    'p18': ('Batatas', 'Frutas e Legumes', 17.0, 0.06, 50, -130),\n    'p19': ('Limpa Vidros', 'Limpeza', 3.69, 0.23, 100, 140),\n    'p2 ': ('Atum', 'Mercearia Salgado', 3.38, 0.06, -150, 80),\n    \"p20\": ('Oregaos', 'Mercearia Salgado', 1.42, 0.06, -150, 120),\n    'p21': ('Bolachas Maria', 'Mercearia Doce', 2.39, 0.23, -100, 140),\n    'p22': ('Pedras Salgadas', 'Bebidas', 2.46, 0.13, -150, -80),\n    'p23': ('Detergente Roupa', 'Limpeza', 12.99, 0.23, 100, 120),\n    'p24': ('Iogurte Grego', 'Lacticinios', 2.59, 0.06, -50, 130),\n    'p3': ('Cogumelos', 'Mercearia Salgado', 1.98, 0.23, -150, 95),\n    'p4': ('Bolachas Cacau', 'Mercearia Doce', 1.39, 0.23, -100, 60),\n    'p5': ('Cerelac', 'Mercearia Doce', 5.65, 0.06, -100, 100),\n    'p6': ('Heineken 12x25CL', 'Bebidas', 8.99, 0.23, -150, -130),\n    'p7': ('Gel Banho', 'Higiene', 5.99, 0.23, 100, 130),\n    'p8': ('Lencos de Bolso', 'Limpeza', 1.59, 0.23, 100, 60),\n    'p9': ('Jardineira', 'Congelados', 1.99, 0.06, -50, -70)}\n\n\n\n\n                    \n\n\n\ncompras =" + comp1 + "\n\n\nt = turtle.Turtle()\nlista_locais = []\nturtle.Screen().setup(360, 740)\n# turtle.screensize(canvwidth=360, canvheight=740)\n# t.speed(100)\ndraw_map()\ndraw_products(lista_locais)\ndraw_line(lista_locais)\n\n    \n\nturtle.Screen().exitonclick()\n");
+        $("#nameprod").toggleClass("d-none");
+        $('#prodPriceZone').text(produto);
+        $('#prodImgZone').append("<img src='Produtos/" + p + ".png' class=' col-12 prodImg' alt='Responsive image'>");
+        return comp1;
+      });
+
+
+
+
+
+
+
+
+
+    });
+
+  </script>
+  <!-- 
+{   
+'p1': ('Ketchup', 'Mercearia Salgado', 1.59),
+'p10': ('Leite 6x1L', 'Lacticinios', 4.92),
+'p11': ('Natas', 'Lacticinios', 0.79),
+'p12': ('Ovos', 'Lacticinios', 0.94),
+'p13': ('Espadarte Posta', 'Peixaria', 6.49), 
+'p14': ('Queijo', 'Charcutaria', 3.8),
+'p15': ('Laranjas', 'Frutas e Legumes', 1.49),
+'p16': ('Ameixa Seca', 'Frutas e Legumes', 2.0),
+'p17': ('Tabuleiro', 'Casa', 7.0),
+'p18': ('Batatas', 'Frutas e Legumes', 17.0),
+'p19': ('Limpa Vidros', 'Limpeza', 3.69),
+'p2 ': ('Atum', 'Mercearia Salgado', 3.38),
+"p20": ('Oregaos', 'Mercearia Salgado', 1.42), 
+'p21': ('Bolachas Maria', 'Mercearia Doce', 2.39), 
+'p22': ('Pedras Salgadas', 'Bebidas', 2.46), 
+'p23': ('Detergente Roupa', 'Limpeza', 12.99),
+'p24': ('Iogurte Grego', 'Lacticinios', 2.59),
+'p3': ('Cogumelos', 'Mercearia Salgado', 1.98),
+'p4': ('Bolachas Cacau', 'Mercearia Doce', 1.39),
+'p5': ('Cerelac', 'Mercearia Doce', 5.65), 
+'p6': ('Heineken 12x25CL', 'Bebidas', 8.99),
+'p7': ('Gel Banho', 'Higiene', 5.99),
+'p8': ('Lencos de Bolso', 'Limpeza', 1.59),
+'p9': ('Jardineira', 'Congelados', 1.99)}
+-->
+  <!-- nas imagens falta jardineira natas heineken detergente roupa e pedras salgadas tabuleiro cogumelos gel de banho-->
+
+</body>
+
+</html>
